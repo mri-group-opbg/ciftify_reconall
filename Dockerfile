@@ -16,4 +16,6 @@ RUN apt-get update && apt-get install -y \
 	libgl1-mesa-glx libxmu6 libopenblas-base libopenblas-dev \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+COPY launch.sh /app/launch.sh
+
 CMD ['ciftify_recon_all']
